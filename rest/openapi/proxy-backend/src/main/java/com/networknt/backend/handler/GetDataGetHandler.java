@@ -1,15 +1,15 @@
 package com.networknt.backend.handler;
 
 import com.networknt.config.Config;
+import com.networknt.handler.LightHttpHandler;
 import com.networknt.server.Server;
-import io.undertow.server.HttpHandler;
 import io.undertow.server.HttpServerExchange;
 import io.undertow.util.HttpString;
-
 import java.util.HashMap;
 import java.util.Map;
 
-public class GetDataGetHandler implements HttpHandler {
+public class GetDataGetHandler implements LightHttpHandler {
+
     static final boolean enableHttp2 = Server.config.isEnableHttp2();
     static final boolean enableHttps = Server.config.isEnableHttps();
     static final int httpPort = Server.config.getHttpPort();
@@ -25,6 +25,5 @@ public class GetDataGetHandler implements HttpHandler {
         examples.put("httpPort", httpPort);
         examples.put("httpsPort", httpsPort);
         exchange.getResponseHeaders().add(new HttpString("Content-Type"), "application/json");
-        exchange.getResponseSender().send(Config.getInstance().getMapper().writeValueAsString(examples));
-    }
+        exchange.getResponseSender().send(Config.getInstance().getMapper().writeValueAsString(examples));    }
 }

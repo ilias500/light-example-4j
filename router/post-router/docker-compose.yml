@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+
+  light-router:
+    image:  networknt/light-router:1.5.24
+    network_mode: host
+    ports:
+    - 8000:8000
+    volumes:
+    - ./https:/config
+    # - ./http:/config

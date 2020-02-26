@@ -4,3 +4,5 @@ allowedOrigins:
 allowedMethods:
 - GET
 - POST
+- PUT
+

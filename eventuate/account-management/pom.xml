@@ -66,13 +66,10 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <version.light-4j>1.5.15</version.light-4j>
-        <version.light-rest-4j>1.5.15</version.light-rest-4j>
-        <version.light-eventuate-4j>1.5.15</version.light-eventuate-4j>
-        <version.kafka-clients>0.11.0.0</version.kafka-clients>
-        <version.light-hybrid-4j>1.5.15</version.light-hybrid-4j>
+        <version.light-4j>2.0.1</version.light-4j>
+        <version.kafka-clients>2.0.0</version.kafka-clients>
         <version.rxjava>1.2.2</version.rxjava>
-        <version.jackson>2.9.5</version.jackson>
+        <version.jackson>2.10.0</version.jackson>
         <version.slf4j>1.7.25</version.slf4j>
         <version.jose4j>0.6.3</version.jose4j>
         <version.commons-lang>2.6</version.commons-lang>
@@ -82,16 +79,15 @@
         <version.logback>1.1.7</version.logback>
         <version.junit>4.12</version.junit>
         <version.mockito>2.1.0-beta.124</version.mockito>
-        <version.undertow>1.4.23.Final</version.undertow>
+        <version.undertow>2.0.28.Final</version.undertow>
         <version.swagger-parser>1.0.34</version.swagger-parser>
         <version.hdrhistogram>2.1.8</version.hdrhistogram>
-        <version.json-schema-validator>0.1.18</version.json-schema-validator>
+        <version.json-schema-validator>1.0.29</version.json-schema-validator>
         <version.hikaricp>3.1.0</version.hikaricp>
         <version.fastscanner>2.18.1</version.fastscanner>
         <version.h2>1.3.176</version.h2>
         <version.mysql>6.0.4</version.mysql>
         <version.postgres>42.1.1</version.postgres>
-        <version.oracle>11.2.0.3</version.oracle>
         <argLine>-Xmx512m -XX:MaxPermSize=256m</argLine>
     </properties>
 
@@ -142,22 +138,22 @@
             <dependency>
                 <groupId>com.networknt</groupId>
                 <artifactId>rpc-router</artifactId>
-                <version>${version.light-hybrid-4j}</version>
+                <version>${version.light-4j}</version>
             </dependency>
             <dependency>
                 <groupId>com.networknt</groupId>
                 <artifactId>rpc-security</artifactId>
-                <version>${version.light-hybrid-4j}</version>
+                <version>${version.light-4j}</version>
             </dependency>
             <dependency>
                 <groupId>com.networknt</groupId>
                 <artifactId>codegen-fwk</artifactId>
-                <version>${version.light-hybrid-4j}</version>
+                <version>${version.light-4j}</version>
             </dependency>
             <dependency>
                 <groupId>com.networknt</groupId>
                 <artifactId>codegen-core</artifactId>
-                <version>${version.light-hybrid-4j}</version>
+                <version>${version.light-4j}</version>
             </dependency>
             <dependency>
                 <groupId>com.networknt</groupId>
@@ -272,17 +268,17 @@
             <dependency>
                 <groupId>com.networknt</groupId>
                 <artifactId>swagger-meta</artifactId>
-                <version>${version.light-rest-4j}</version>
+                <version>${version.light-4j}</version>
             </dependency>
             <dependency>
                 <groupId>com.networknt</groupId>
                 <artifactId>swagger-validator</artifactId>
-                <version>${version.light-rest-4j}</version>
+                <version>${version.light-4j}</version>
             </dependency>
             <dependency>
                 <groupId>com.networknt</groupId>
                 <artifactId>swagger-security</artifactId>
-                <version>${version.light-rest-4j}</version>
+                <version>${version.light-4j}</version>
             </dependency>
             <dependency>
                 <groupId>io.swagger</groupId>
@@ -294,32 +290,32 @@
             <dependency>
                 <groupId>com.networknt</groupId>
                 <artifactId>eventuate-common</artifactId>
-                <version>${version.light-eventuate-4j}</version>
+                <version>${version.light-4j}</version>
             </dependency>
             <dependency>
                 <groupId>com.networknt</groupId>
                 <artifactId>eventuate-event</artifactId>
-                <version>${version.light-eventuate-4j}</version>
+                <version>${version.light-4j}</version>
             </dependency>
             <dependency>
                 <groupId>com.networknt</groupId>
                 <artifactId>eventuate-client</artifactId>
-                <version>${version.light-eventuate-4j}</version>
+                <version>${version.light-4j}</version>
             </dependency>
             <dependency>
                 <groupId>com.networknt</groupId>
                 <artifactId>eventuate-client-jdbc</artifactId>
-                <version>${version.light-eventuate-4j}</version>
+                <version>${version.light-4j}</version>
             </dependency>
             <dependency>
                 <groupId>com.networknt</groupId>
                 <artifactId>eventuate-client-jdbc-common</artifactId>
-                <version>${version.light-eventuate-4j}</version>
+                <version>${version.light-4j}</version>
             </dependency>
             <dependency>
                 <groupId>com.networknt</groupId>
                 <artifactId>eventuate-server-jdbc</artifactId>
-                <version>${version.light-eventuate-4j}</version>
+                <version>${version.light-4j}</version>
             </dependency>
             <dependency>
                 <groupId>com.networknt</groupId>
@@ -414,11 +410,6 @@
                 <groupId>org.postgresql</groupId>
                 <artifactId>postgresql</artifactId>
                 <version>${version.postgres}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.oracle</groupId>
-                <artifactId>ojdbc6</artifactId>
-                <version>${version.oracle}</version>
             </dependency>
             <!-- Test dependencies -->
             <dependency>
@@ -634,10 +625,6 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </repository>
-        <repository>
-            <id>codelds</id>
-            <url>https://code.lds.org/nexus/content/groups/main-repo</url>
         </repository>
     </repositories>
 </project>
